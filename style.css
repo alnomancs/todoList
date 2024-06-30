@@ -1,0 +1,80 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #daabab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#taskInput {
+  width: 75%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background-color: #5cb85c;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4cae4c;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+li.completed span {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+li button {
+  background-color: #d9534f;
+  margin-left: 10px;
+}
+
+li button:hover {
+  background-color: #c9302c;
+}
+
+li input[type="checkbox"] {
+  margin-right: 10px;
+}
