@@ -41,16 +41,16 @@ function addTask() {
   taskInput.value = "";
 }
 
-// function removeTask(button) {
-//   const task = button.parentElement;
-//   task.remove();
-// }
+function removeTask(button) {
+  const task = button.parentElement;
+  task.remove();
+}
 
-// function toggleTask(checkbox) {
-//   const task = checkbox.parentElement;
-//   task.classList.toggle("completed");
-//   saveTask();
-// }
+function toggleTask(checkbox) {
+  const task = checkbox.parentElement;
+  task.classList.toggle("completed");
+  saveTask();
+}
 
 // function saveTask() {
 //   const tasks = [];
