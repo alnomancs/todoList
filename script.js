@@ -47,49 +47,51 @@ function removeTask(button) {
 }
 
 function toggleTask(checkbox) {
+  console.log(checkbox);
   const task = checkbox.parentElement;
+  console.log(task);
   task.classList.toggle("completed");
   saveTask();
 }
 
-// function saveTask() {
-//   const tasks = [];
-//   console.log(document.querySelectorAll("#tasklist li"));
-//   document.querySelectorAll("#tasklist li").forEach((task) => {
-//     const text = task.querySelector("span").textContent;
-//     const completed = task.classList.contains("completed");
-//     tasks.push({ text, completed });
-//   });
+function saveTask() {
+  const tasks = [];
+  
+  document.querySelectorAll("#tasklist li").forEach((task) => {
+    const text = task.querySelector("span").textContent;
+    const completed = task.classList.contains("completed");
+    tasks.push({ text, completed });
+  });
 
-//   localStorage.setItem("tasks", JSON.stringify(tasks));
-// }
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
 
-// function loadTask() {
-//   const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+function loadTask() {
+  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-//   const taskList = document.getElementById("taskList");
-//   taskList.innerHTML = "";
-//   tasks.forEach((task) => {
-//     console.log(task);
-//     const newTask = document.createElement("li");
+  const taskList = document.getElementById("taskList");
+  taskList.innerHTML = "";
+  tasks.forEach((task) => {
+    console.log(task);
+    const newTask = document.createElement("li");
 
-//     const checkbox = document.createElement("input");
-//     checkbox.type = "checkbox";
-//     checkbox.checked = task.completed;
-//     newTask.appendChild(checkbox);
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.checked = task.completed;
+    newTask.appendChild(checkbox);
 
-//     const span = document.createElement("span");
-//     span.textContent = task.text;
-//     newTask.appendChild(span);
+    const span = document.createElement("span");
+    span.textContent = task.text;
+    newTask.appendChild(span);
 
-//     const removeButton = document.createElement("button");
-//     removeButton.textContent = "Remove";
-//     newTask.appendChild(removeButton);
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "Remove";
+    newTask.appendChild(removeButton);
 
-//     if (task.completed) {
-//       newTask.classList.add("completed");
-//     }
+    if (task.completed) {
+      newTask.classList.add("completed");
+    }
 
-//     taskList.appendChild(newTask);
-//   });
-// }
+    taskList.appendChild(newTask);
+  });
+}
