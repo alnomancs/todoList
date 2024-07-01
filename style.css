@@ -74,7 +74,10 @@ li button {
 li button:hover {
   background-color: #c9302c;
 }
+li span {
+  text-align: right;
+}
 
 li input[type="checkbox"] {
-  margin-right: 10px;
+  /* margin-right: 10px; */
 }
