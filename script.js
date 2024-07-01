@@ -1,45 +1,45 @@
-// document.addEventListener("DOMContentLoaded", () => {
-//   loadTask();
-//   document.getElementById("taskList").addEventListener("change", () => {
-//     if (event.target.tagName === "INPUT" && event.target.type === "checkbox") {
-//       toggleTask(event.target);
-//     }
-//   });
+document.addEventListener("DOMContentLoaded", () => {
+  loadTask();
+  document.getElementById("taskList").addEventListener("change", () => {
+    if (event.target.tagName === "INPUT" && event.target.type === "checkbox") {
+      toggleTask(event.target);
+    }
+  });
 
-//   document.getElementById("taskList").addEventListener("click", () => {
-//     if (event.target.tagName === "BUTTON") {
-//       removeTask(event.target);
-//     }
-//   });
-// });
+  document.getElementById("taskList").addEventListener("click", () => {
+    if (event.target.tagName === "BUTTON") {
+      removeTask(event.target);
+    }
+  });
+});
 
-// function addTask() {
-//   const taskInput = document.getElementById("taskInput");
-//   const taskText = taskInput.value.trim();
+function addTask() {
+  const taskInput = document.getElementById("taskInput");
+  const taskText = taskInput.value.trim();
 
-//   if (taskText === "") {
-//     alert("Please enter a task");
-//     return;
-//   }
-//   const taskList = document.getElementById("taskList");
-//   const newTask = document.createElement("li");
+  if (taskText === "") {
+    alert("Please enter a task");
+    return;
+  }
+  const taskList = document.getElementById("taskList");
+  const newTask = document.createElement("li");
 
-//   const checkbox = document.createElement("input");
-//   checkbox.type = "checkbox";
-//   newTask.appendChild(checkbox);
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  newTask.appendChild(checkbox);
 
-//   const span = document.createElement("span");
-//   span.textContent = taskText;
-//   newTask.appendChild(span);
+  const span = document.createElement("span");
+  span.textContent = taskText;
+  newTask.appendChild(span);
 
-//   const removeButton = document.createElement("button");
-//   removeButton.textContent = "Remove";
-//   newTask.appendChild(removeButton);
+  const removeButton = document.createElement("button");
+  removeButton.textContent = "Remove";
+  newTask.appendChild(removeButton);
 
-//   taskList.appendChild(newTask);
-//   saveTask();
-//   taskInput.value = "";
-// }
+  taskList.appendChild(newTask);
+  saveTask();
+  taskInput.value = "";
+}
 
 // function removeTask(button) {
 //   const task = button.parentElement;
